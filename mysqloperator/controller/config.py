@@ -12,10 +12,7 @@ debug = False
 enable_mysqld_general_log = False
 
 _pull_policy = os.getenv("MYSQL_OPERATOR_IMAGE_PULL_POLICY")
-if _pull_policy:
-    default_image_pull_policy = ImagePullPolicy[_pull_policy]
-else:
-    default_image_pull_policy = ImagePullPolicy.Always
+default_image_pull_policy = ImagePullPolicy.Always
 
 
 # Constants
